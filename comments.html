@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Comments</title>
+</head>
+
+<body id="comments">
+
+  <form id="comment" method="post" action="comments.php">
+  <div class="comment-block">
+      <label>Username:<input type="text" name="name" id="name"></label><br>
+      <label>Comment:<br><textarea name="comment" id="comment"></textarea></label><br>
+      <input type="hidden" name="image_id" id="image_id" value="<? echo $_GET["id"]; ?">
+
+      <input type="submit" name="submit" value="Submit"></input>
+    </div>
+  </form>
+
+</body>
+</html>

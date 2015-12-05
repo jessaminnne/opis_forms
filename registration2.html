@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Registration</title>
+  <script src="registration.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/registration.css">
+</head>
+
+<body id="registration" onload="document.registration.userid.focus();">
+  <div class="reg-header">
+</div>
+
+<form id="reg-form" method="post" action="process.php">
+<div class="reg-block">
+    <h1>Opis</h1>
+    <h2 class="sub-header">Share your talent with others</h2>
+
+    <label>Username</label>
+    <input type="text" id="name" name="name" placeholder="Choose a Username" required>
+    <span class="error"><?php echo $nameErr;?></span>
+    <br>
+
+    <label>Email address:</label>
+    <input type="text" id="email_addr" name="email_addr" placeholder="Enter your Email" required>
+    <span class="error"><?php echo $email_addrErr;?></span>
+    <br>
+
+    <label>Confirm email address:</label>
+    <input type="text" id="email_addr_repeat" name="email_addr_repeat" placeholder="Confirm email address" required oninput="check(this)">
+    <span class="error"><?php echo $email_addr_repeatErr;?></span>
+    <br>
+
+    <label>Create a password:</label>
+    <input type="password" id="password" name="password" placeholder="Create a Password" required>
+    <span class="error"><?php echo $passwordErr;?></span>
+    <br>
+
+    <label>Confirm password:</label>
+    <input type="password" id="password_repeat" name="password_repeat" placeholder="Confirm Password" required oninput="check(this)">
+    <span class="error"><?php echo $password_repeatErr;?></span>
+    <br>
+
+    <input type="submit" id="button" name="submit" value="Submit">
+</div>
+  </form>
+
+<footer>
+  <p>Copyright &nbsp; &copy; &nbsp; Colin Chen &nbsp; &amp; &nbsp; Jessamine Bartley-Matthews
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</body>
+
+</html>
